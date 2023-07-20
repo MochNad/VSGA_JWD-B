@@ -1,52 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Daftar Siswa</title>
+    <title>Halaman Utama</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="container mt-4">
         <div class="card border-0 shadow rounded">
             <div class="card-header border-0 shadow rounded">
-                Daftar Siswa
-                <a href="tambah.php" class="btn btn-success float-right border-0 shadow rounded">
-                    Tambah
-                </a>
+                Halaman Utama
             </div>
-            <div class="card-body">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nama</th>
-                            <th>Alamat</th>
-                            <th>Tanggal Lahir</th>
-                            <th>Jenis Kelamin</th>
-                            <th>Agama</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        // Include the functions file
-                        require_once 'functions.php';
-
-                        // Get all rows from the 'siswa' table
-                        $siswaData = getAllSiswa();
-
-                        // Loop through the data and display it in the table
-                        foreach ($siswaData as $siswa) {
-                            echo '<tr>';
-                            echo '<td>' . $siswa['id'] . '</td>';
-                            echo '<td>' . $siswa['nama'] . '</td>';
-                            echo '<td>' . $siswa['alamat'] . '</td>';
-                            echo '<td>' . $siswa['tgl_lahir'] . '</td>';
-                            echo '<td>' . $siswa['jk'] . '</td>';
-                            echo '<td>' . $siswa['agama'] . '</td>';
-                            echo '</tr>';
-                        }
-                        ?>
-                    </tbody>
-                </table>
+            <div class="card-body d-flex flex-column align-items-center">
+                <i class="fas fa-school fa-10x text-primary mb-4"></i>
+                <a href="daftar.php" class="btn btn-primary btn-block border-0 shadow rounded-pill">Daftar Siswa</a>
+                <a href="tambah.php" class="btn btn-success btn-block border-0 shadow rounded-pill">Tambah Siswa</a>
             </div>
         </div>
     </div>

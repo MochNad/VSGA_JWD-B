@@ -74,9 +74,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="alamat">Alamat</label>
                         <textarea class="form-control" id="alamat" name="alamat" rows="3" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary float-right border-0 shadow rounded">Tambah</button>
+                    <button type="submit" class="btn btn-primary float-right border-0 shadow rounded-pill">Tambah</button>
                 </form>
-                <a href="index.php" class="btn btn-secondary border-0 shadow rounded">
+                <a href="index.php" class="btn btn-secondary border-0 shadow rounded-pill">
                     Kembali
                 </a>
             </div>
