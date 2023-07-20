@@ -13,8 +13,8 @@
             </div>
             <div class="card-body d-flex flex-column align-items-center">
                 <i class="fas fa-school fa-10x text-primary mb-4"></i>
-                <a href="daftar.php" class="btn btn-primary btn-block border-0 shadow rounded-pill">Daftar Siswa</a>
-                <a href="tambah.php" class="btn btn-success btn-block border-0 shadow rounded-pill">Tambah Siswa</a>
+                <a href="daftar.php" class="btn btn-primary btn-block border-0 shadow rounded">Daftar Siswa</a>
+                <a href="tambah.php" class="btn btn-success btn-block border-0 shadow rounded">Tambah Siswa</a>
             </div>
         </div>
     </div>

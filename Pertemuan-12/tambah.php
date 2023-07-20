@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Call the tambahSiswa() function to insert data into the database
     if (tambahSiswa($nama, $alamat, $tgl_lahir, $jk, $agama)) {
         // Redirect to the index page if the data insertion was successful
-        header('Location: index.php');
+        header('Location: daftar.php');
         exit();
     } else {
         // Handle error if data insertion fails (you can show an error message or perform other actions here)
@@ -74,9 +74,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="alamat">Alamat</label>
                         <textarea class="form-control" id="alamat" name="alamat" rows="3" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary float-right border-0 shadow rounded-pill">Tambah</button>
+                    <button type="submit" class="btn btn-sm btn-primary float-right border-0 shadow rounded">Tambah</button>
                 </form>
-                <a href="index.php" class="btn btn-secondary border-0 shadow rounded-pill">
+                <a href="daftar.php" class="btn btn-sm btn-secondary border-0 shadow rounded">
                     Kembali
                 </a>
             </div>
