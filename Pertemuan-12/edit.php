@@ -8,12 +8,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'];
     $nama = $_POST['nama'];
     $alamat = $_POST['alamat'];
-    $tgl_lahir = $_POST['tgl_lahir'];
+    $sekolah_asal = $_POST['sekolah_asal'];
     $jk = $_POST['jk'];
     $agama = $_POST['agama'];
 
     // Call the updateSiswa() function to update data in the database
-    if (updateSiswa($id, $nama, $alamat, $tgl_lahir, $jk, $agama)) {
+    if (updateSiswa($id, $nama, $alamat, $sekolah_asal, $jk, $agama)) {
         // Redirect to the index page if the data update was successful
         header('Location: daftar.php');
         exit();
@@ -55,8 +55,8 @@ if (isset($_GET['id'])) {
                         <input type="text" class="form-control" id="nama" name="nama" required value="<?php echo $siswa['nama']; ?>">
                     </div>
                     <div class="form-group">
-                        <label for="tgl_lahir">Tanggal Lahir</label>
-                        <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" required value="<?php echo $siswa['tgl_lahir']; ?>">
+                        <label for="sekolah_asal">Sekolah Asal</label>
+                        <input type="text" class="form-control" id="sekolah_asal" name="sekolah_asal" required value="<?php echo $siswa['sekolah_asal']; ?>">
                     </div>
                     <div class="row">
                         <div class="col-md-6">

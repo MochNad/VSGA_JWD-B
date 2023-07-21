@@ -6,12 +6,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get the form data
     $nama = $_POST['nama'];
     $alamat = $_POST['alamat'];
-    $tgl_lahir = $_POST['tgl_lahir'];
+    $sekolah_asal = $_POST['sekolah_asal'];
     $jk = $_POST['jk'];
     $agama = $_POST['agama'];
 
     // Call the tambahSiswa() function to insert data into the database
-    if (tambahSiswa($nama, $alamat, $tgl_lahir, $jk, $agama)) {
+    if (tambahSiswa($nama, $alamat, $sekolah_asal, $jk, $agama)) {
         // Redirect to the index page if the data insertion was successful
         header('Location: daftar.php');
         exit();
@@ -41,8 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input type="text" class="form-control" id="nama" name="nama" required>
                     </div>
                     <div class="form-group">
-                        <label for="tgl_lahir">Tanggal Lahir</label>
-                        <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" required>
+                        <label for="sekolah_asal">Sekolah Asal</label>
+                        <input type="text" class="form-control" id="sekolah_asal" name="sekolah_asal" required>
                     </div>
                     <div class="row">
                         <div class="col-md-6">

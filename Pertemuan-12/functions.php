@@ -22,18 +22,18 @@ function getAllSiswa()
 }
 
 // Function to add a new row to the 'siswa' table
-function tambahSiswa($nama, $alamat, $tgl_lahir, $jk, $agama)
+function tambahSiswa($nama, $alamat, $sekolah_asal, $jk, $agama)
 {
     global $conn;
 
     // Escape user inputs to prevent SQL injection
     $nama = mysqli_real_escape_string($conn, $nama);
     $alamat = mysqli_real_escape_string($conn, $alamat);
-    $tgl_lahir = mysqli_real_escape_string($conn, $tgl_lahir);
+    $sekolah_asal = mysqli_real_escape_string($conn, $sekolah_asal);
     $jk = mysqli_real_escape_string($conn, $jk);
     $agama = mysqli_real_escape_string($conn, $agama);
 
-    $query = "INSERT INTO siswa (nama, alamat, tgl_lahir, jk, agama) VALUES ('$nama', '$alamat', '$tgl_lahir', '$jk', '$agama')";
+    $query = "INSERT INTO siswa (nama, alamat, sekolah_asal, jk, agama) VALUES ('$nama', '$alamat', '$sekolah_asal', '$jk', '$agama')";
     $result = mysqli_query($conn, $query);
 
     if (!$result) {
@@ -63,21 +63,21 @@ function getSiswaById($id)
 }
 
 // Function to update a student's data by ID
-function updateSiswa($id, $nama, $alamat, $tgl_lahir, $jk, $agama)
+function updateSiswa($id, $nama, $alamat, $sekolah_asal, $jk, $agama)
 {
     global $conn;
 
     $id = mysqli_real_escape_string($conn, $id);
     $nama = mysqli_real_escape_string($conn, $nama);
     $alamat = mysqli_real_escape_string($conn, $alamat);
-    $tgl_lahir = mysqli_real_escape_string($conn, $tgl_lahir);
+    $sekolah_asal = mysqli_real_escape_string($conn, $sekolah_asal);
     $jk = mysqli_real_escape_string($conn, $jk);
     $agama = mysqli_real_escape_string($conn, $agama);
 
     $query = "UPDATE siswa SET 
               nama = '$nama',
               alamat = '$alamat',
-              tgl_lahir = '$tgl_lahir',
+              sekolah_asal = '$sekolah_asal',
               jk = '$jk',
               agama = '$agama'
               WHERE id = $id";

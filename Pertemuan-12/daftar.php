@@ -18,12 +18,12 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th>No</th>
                             <th>Nama</th>
                             <th>Alamat</th>
-                            <th>Tanggal Lahir</th>
                             <th>Jenis Kelamin</th>
                             <th>Agama</th>
+                            <th>Sekolah Asal</th>
                             <th>Action</th> <!-- New column for actions -->
                         </tr>
                     </thead>
@@ -41,9 +41,9 @@
                             echo '<td>' . $siswa['id'] . '</td>';
                             echo '<td>' . $siswa['nama'] . '</td>';
                             echo '<td>' . $siswa['alamat'] . '</td>';
-                            echo '<td>' . $siswa['tgl_lahir'] . '</td>';
                             echo '<td>' . $siswa['jk'] . '</td>';
                             echo '<td>' . $siswa['agama'] . '</td>';
+                            echo '<td>' . $siswa['sekolah_asal'] . '</td>';
                             echo '<td>';
                             echo '<a href="edit.php?id=' . $siswa['id'] . '" class="btn btn-sm btn-primary border-0 shadow rounded">Edit</a>';
                             echo ' ';
